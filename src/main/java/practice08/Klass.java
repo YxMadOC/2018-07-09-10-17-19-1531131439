@@ -19,7 +19,7 @@ public class Klass {
         return displayName;
     }
 
-    public void assignLeader(Student student){
+    public void assignLeader(Student student) {
         this.leader = student;
     }
 

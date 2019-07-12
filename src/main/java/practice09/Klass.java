@@ -23,10 +23,10 @@ public class Klass {
         return displayName;
     }
 
-    public void assignLeader(Student student){
-        if(!member.contains(student)){
+    public void assignLeader(Student student) {
+        if (!member.contains(student)) {
             System.out.print("It is not one of us.\n");
-        }else{
+        } else {
             this.leader = student;
         }
     }

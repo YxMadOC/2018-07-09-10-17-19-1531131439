@@ -14,7 +14,7 @@ public class Person {
         this.id = id;
     }
 
-    public String introduce(){
+    public String introduce() {
         return String.format("My name is %s. I am %d years old.", name, age);
     }
 

@@ -19,7 +19,7 @@ public class Teacher extends Person {
 
     @Override
     public String introduce() {
-        if(klass == null)
+        if (klass == null)
             return String.format("My name is %s. I am %d years old. I am a Teacher. I teach No Class.", name, age);
         else
             return String.format("My name is %s. I am %d years old. I am a Teacher. I teach Class %d.", name, age, klass);

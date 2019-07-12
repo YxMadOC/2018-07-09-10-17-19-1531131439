@@ -24,10 +24,10 @@ public class Klass {
         return displayName;
     }
 
-    public void assignLeader(Student student){
-        if(!member.contains(student)){
+    public void assignLeader(Student student) {
+        if (!member.contains(student)) {
             System.out.print("It is not one of us.\n");
-        }else{
+        } else {
             this.leader = student;
             this.teachers.forEach(teacher -> System.out.print(String.format("I am %s. I know %s become Leader of Class %d.\n", teacher.name, student.name, number)));
         }

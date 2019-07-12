@@ -7,7 +7,7 @@ public class Worker extends Person {
     }
 
     @Override
-    public String introduce(){
+    public String introduce() {
         return "I am a Worker. I have a job.";
     }
 

@@ -24,9 +24,9 @@ public class Teacher extends Person {
 
     @Override
     public String introduce() {
-        if(classes == null)
+        if (classes == null)
             return String.format("My name is %s. I am %d years old. I am a Teacher. I teach No Class.", name, age);
-        else{
+        else {
             String classesStr = StringUtils.join(classes.stream().map(Klass::getNumber).collect(Collectors.toList()), ", ");
             return String.format("My name is %s. I am %d years old. I am a Teacher. I teach Class %s.", name, age, classesStr);
 
@@ -34,15 +34,15 @@ public class Teacher extends Person {
 
     }
 
-    public String introduceWith(Student student){
-        if(isTeaching(student)){
-            return String.format("My name is %s. I am %d years old. I am a Teacher. I teach %s.",name, age, student.name);
-        }else{
-            return String.format("My name is %s. I am %d years old. I am a Teacher. I don't teach %s.",name, age, student.name);
+    public String introduceWith(Student student) {
+        if (isTeaching(student)) {
+            return String.format("My name is %s. I am %d years old. I am a Teacher. I teach %s.", name, age, student.name);
+        } else {
+            return String.format("My name is %s. I am %d years old. I am a Teacher. I don't teach %s.", name, age, student.name);
         }
     }
 
-    public boolean isTeaching(Student student){
+    public boolean isTeaching(Student student) {
         return classes.stream().map(Klass::getNumber).collect(Collectors.toList()).contains(student.getKlass().getNumber());
     }
 
