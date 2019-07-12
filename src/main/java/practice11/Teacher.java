@@ -1,6 +1,6 @@
 package practice11;
 
-import org.apache.commons.lang3.StringUtils;
+import utils.Utils;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,7 +28,8 @@ public class Teacher extends Person {
         if (classes == null)
             return String.format("My name is %s. I am %d years old. I am a Teacher. I teach No Class.", name, age);
         else {
-            String classesStr = StringUtils.join(classes.stream().map(Klass::getNumber).collect(Collectors.toList()), ", ");
+            List klassNumberList = classes.stream().map(Klass::getNumber).collect(Collectors.toList());
+            String classesStr = Utils.join(klassNumberList.toArray(), ", ", 0, klassNumberList.size());
             return String.format("My name is %s. I am %d years old. I am a Teacher. I teach Class %s.", name, age, classesStr);
 
         }
